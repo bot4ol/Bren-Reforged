@@ -1,0 +1,81 @@
+{
+  "itemGroup.bren": "Bren",
+
+  "item.bren.machine_gun": "Пулемёт",
+  "item.bren.auto_gun": "Автомат",
+  "item.bren.rifle": "Винтовка",
+  "item.bren.shotgun": "Дробовик",
+  "item.bren.revolver": "Револьвер",
+  "item.bren.netherite_machine_gun": "Незеритовый пулемёт",
+  "item.bren.netherite_auto_gun": "Незеритовый автомат",
+  "item.bren.netherite_rifle": "Незеритовая винтовка",
+  "item.bren.netherite_shotgun": "Незеритовый дробовик",
+  "item.bren.netherite_revolver": "Незеритовый револьвер",
+
+  "item.bren.magazine": "Магазин",
+  "item.bren.short_magazine": "Короткий магазин",
+  "item.bren.clothed_magazine": "Обмотанный магазин",
+  "item.bren.bullet": "Пуля",
+  "item.bren.shell": "Ружейный патрон",
+  "item.bren.metal_tube": "Металлическая трубка",
+  "item.bren.auto_loader_contraption": "Устройство авто-зарядки",
+
+  "enchantment.bren.silenced": "Бесшумность",
+  "enchantment.bren.overflow": "Переполнение",
+  "enchantment.bren.autofill": "Автозаполнение",
+  "enchantment.bren.steady_hands": "Твёрдая рука",
+  "enchantment.bren.fire_lance": "Огненное копьё",
+  "enchantment.bren.mounted": "Закреплённый",
+
+  "desc.bren.item.gun_with_mag.content": "Патронов",
+  "desc.bren.item.magazine.content": "Боеприпасы",
+
+  "attribute.name.ranged_damage": "Урон дальнего боя",
+  "attribute.name.fire_rate": "Скорострельность",
+  "attribute.name.recoil": "Отдача",
+
+  "block.bren.workbench": "Оружейный верстак",
+
+  "entity.minecraft.villager.gunsmith": "Оружейник",
+
+  "bren.item.shoot_silenced": "Выстрел с глушителем",
+  "bren.item.shoot": "Выстрел",
+  "bren.item.distant_gunfire": "Дальняя стрельба",
+  "bren.item.magazine_insert": "Магазин вставлен",
+  "bren.item.magazine_remove": "Магазин извлечён",
+  "bren.item.shell_insert": "Гильза вставлена",
+  "bren.item.rack": "Передёргивание затвора",
+  "bren.particle.casing.bounce": "Звук падения гильзы",
+  "bren.entity.villager.work_gunsmith": "Оружейник работает",
+  "bren.item.revolver.bullet_insert": "Пуля вставлена",
+  "bren.item.revolver.reload": "Щелчок барабана",
+  "bren.item.revolver.spinning": "Вращение револьвера",
+
+  "death.attack.bullet": "%1$s был застрелен %2$s!",
+
+  "advancements.bren.adventure.auto_loader_contraption.description": "Получите устройство авто-зарядки",
+  "advancements.bren.adventure.auto_loader_contraption.title": "Это чё тако...?!",
+
+  "advancements.bren.adventure.machine_gun.description": "Получите пулемёт",
+  "advancements.bren.adventure.machine_gun.title": "РАТАТАТАТАТА!!",
+
+  "advancements.bren.adventure.auto_gun.description": "Получите автомат",
+  "advancements.bren.adventure.auto_gun.title": "АК-4... не важно",
+
+  "advancements.bren.adventure.rifle.description": "Получите винтовку",
+  "advancements.bren.adventure.rifle.title": "Увидимся через пять минут...",
+
+  "advancements.bren.adventure.shotgun.description": "Получите дробовик",
+  "advancements.bren.adventure.shotgun.title": "БАБАХ!!!",
+
+  "advancements.bren.adventure.revolver.description": "Получите револьвер",
+  "advancements.bren.adventure.revolver.title": "Маленький Джимми",
+
+  "advancements.bren.adventure.warcrimes.description": "Убейте жителя из ружья",
+  "advancements.bren.adventure.warcrimes.title": "Военные преступления",
+
+  "advancements.bren.adventure.long_shooting_machine_gun.description": "Постреляйте из пулемёта несколько секунд",
+  "advancements.bren.adventure.long_shooting_machine_gun.title": "АААААА ХА-ХА-ХА-ХА-ХА-ХА!!",
+
+  "key.bren.reload": "Перезарядка"
+}
