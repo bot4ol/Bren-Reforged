@@ -2,7 +2,7 @@ package committee.nova.mods.bren.init.registry;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import committee.nova.mods.bren.Bren;  // Добавьте этот импорт
+import committee.nova.mods.bren.Bren;
 
 public class SoundReg {
     public static SoundEvent ITEM_MACHINE_GUN_SHOOT = SoundEvent.createVariableRangeEvent(
