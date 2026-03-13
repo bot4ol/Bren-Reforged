@@ -32,7 +32,7 @@ public abstract class LivingEntityRendererMixin<T extends LivingEntity, M extend
 			if (s.getItem() instanceof GunItem gunItem) {
 				if (gunItem.holdingPose() == PoseType.TWO_ARMS) {
 					if (!livingEntity.isPassenger()) {
-						livingEntity.setYBodyRot(livingEntity.getYHeadRot());
+						livingEntity.setYBodyRot(livingEntity.getYHeadRot() + 45);
 					}
                     pPoseStack.mulPose(Axis.YN.rotation((float) Math.toRadians(target_degree - 90)));
 				}
