@@ -91,8 +91,9 @@ public class GunEntityModelAnimator {
 
             other_arm.xRot = -0.6981317F + p/3 - f3/2 - (reloading ? fr:0);
             other_arm.yRot = (isLeftHanded ? -1.090831F - y : 1.090831F + y) + (p/2) * l + f3/3;
-
-            head.yRot = y - 0.7853982F * l; //мда
+            
+            //head.yRot = y - 0.7853982F * l;
+            head.yRot = y;
 
         }
     }
