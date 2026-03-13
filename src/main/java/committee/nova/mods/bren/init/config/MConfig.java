@@ -80,6 +80,14 @@ public class MConfig {
     @Entry()
     public static final ConfigHelper.FloatValue netheriteRevolverDamage = new ConfigHelper.FloatValue(8.5f,
             "Ranged damage for the Netherite Revolver");
+    
+    @Entry()
+    public static final ConfigHelper.FloatValue winchesterDamage = new ConfigHelper.FloatValue(10f,
+            "Ranged damage for the Winchester");
+    
+    @Entry()
+    public static final ConfigHelper.FloatValue netheritewinchesterDamage = new ConfigHelper.FloatValue(12f,
+            "Ranged damage for the Netherite Winchester");
 
     public static void init() {
         if (!file.exists()) {
