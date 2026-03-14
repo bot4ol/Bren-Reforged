@@ -15,8 +15,8 @@
   "item.bren.magazine": "Магазин",
   "item.bren.short_magazine": "Короткий магазин",
   "item.bren.clothed_magazine": "Обмотанный магазин",
-  "item.bren.bullet": "Пуля",
-  "item.bren.shell": "Ружейный патрон",
+  "item.bren.bullet": "Патрон",
+  "item.bren.shell": "Картечь",
   "item.bren.metal_tube": "Металлическая трубка",
   "item.bren.auto_loader_contraption": "Устройство авто-зарядки",
 
@@ -25,7 +25,7 @@
   "enchantment.bren.autofill": "Автозаполнение",
   "enchantment.bren.steady_hands": "Твёрдая рука",
   "enchantment.bren.fire_lance": "Огненное копьё",
-  "enchantment.bren.mounted": "Закреплённый",
+  "enchantment.bren.mounted": "Сильные ноги",
 
   "desc.bren.item.gun_with_mag.content": "Патронов",
   "desc.bren.item.magazine.content": "Боеприпасы",
@@ -77,5 +77,8 @@
   "advancements.bren.adventure.long_shooting_machine_gun.description": "Постреляйте из пулемёта несколько секунд",
   "advancements.bren.adventure.long_shooting_machine_gun.title": "АААААА ХА-ХА-ХА-ХА-ХА-ХА!!",
 
-  "key.bren.reload": "Перезарядка"
+  "key.bren.reload": "Перезарядка",
+
+  "item.bren.winchester": "Винтовка рычажного действия",
+  "item.bren.netherite_winchester": "Незеритовая винтовка рычажного действия"
 }
