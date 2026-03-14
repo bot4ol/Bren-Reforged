@@ -11,16 +11,13 @@
     "T": {
       "item": "bren:metal_tube"
     },
-    "F": {
-      "item": "minecraft:iron_block"
-    },
     "P": {
       "tag": "minecraft:logs"
     }
   },
   "pattern": [
     "T  ",
-    "ITP",
+    "ITM",
     " IP"
   ],
   "result": {
