@@ -1,0 +1,6 @@
+{
+  "parent": "bren:item/winchester_handheld",
+  "textures": {
+    "layer0": "bren:item/winchester_gui"
+  }
+}
