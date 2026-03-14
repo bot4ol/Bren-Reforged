@@ -80,6 +80,20 @@ public class ItemReg {
     public static final RegistryObject<Item>NETHERITE_REVOLVER = item("netherite_revolver", (s) ->  new RevolverItem(
             new Item.Properties().fireResistant(), Tiers.NETHERITE, new GunProperties().rangedDamage(N_REVOLVER_DAMAGE).fireRate(15).recoil(REVOLVER_RECOIL)
             .shootSound(SoundReg.ITEM_REVOLVER_SHOOT, null)));
+    
+    public static final RegistryObject<Item> WINCHESTER = item("winchester", (s) -> new LeverActionItem(
+        new Item.Properties(), Tiers.IRON, new GunProperties()
+                .rangedDamage(MConfig.winchesterDamage.get())
+                .fireRate(20)
+                .recoil(20f)
+                .shootSound(SoundReg.ITEM_RIFLE_SHOOT, SoundReg.ITEM_RIFLE_SHOOT_SILENCED)));
+    
+    public static final RegistryObject<Item> NETHERITE_WINCHESTER = item("netherite_winchester", (s) -> new LeverActionItem(
+        new Item.Properties(), Tiers.IRON, new GunProperties()
+                .rangedDamage(MConfig.netheritewinchesterDamage.get())
+                .fireRate(20) 
+                .recoil(20f) 
+                .shootSound(SoundReg.ITEM_RIFLE_SHOOT, SoundReg.ITEM_RIFLE_SHOOT_SILENCED)));
 
     public static final RegistryObject<Item>MAGAZINE = item("magazine",  (s) -> new MagazineItem(new Item.Properties(), 20));
     public static final RegistryObject<Item>CLOTHED_MAGAZINE = item("clothed_magazine",  (s) -> new ColorableMagazineItem(new Item.Properties(), 20));
