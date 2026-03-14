@@ -113,7 +113,7 @@ public abstract class ItemRendererMixin {
                         } else {
                             float z = Math.max((1 - f + f1) / 2, 0);
                             float f2 = reloading ? ((float) Math.sin((f1 * 2 - 0.5) * Math.PI) * 0.5F + 0.5F) / 3 : z;
-                            matrices.mulPose(Axis.YP.rotationDegrees(leftHanded ? 10 : -10));
+                            //matrices.mulPose(Axis.YP.rotationDegrees(leftHanded ? 10 : -10));
                             matrices.mulPose(Axis.ZP.rotationDegrees(leftHanded ? 45 : -45));
                             matrices.mulPose(Axis.XP.rotationDegrees(f2 * 30 + 45));
 
