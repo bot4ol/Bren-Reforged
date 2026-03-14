@@ -103,6 +103,8 @@ public class BrenModClient {
         registerGUIModels(ForgeRegistries.ITEMS.getKey(ItemReg.NETHERITE_AUTO_GUN.get()), modelIdentifierList, true, true);
         registerGUIModels(ForgeRegistries.ITEMS.getKey(ItemReg.NETHERITE_RIFLE.get()), modelIdentifierList, false, true);
         registerGUIModels(ForgeRegistries.ITEMS.getKey(ItemReg.NETHERITE_SHOTGUN.get()), modelIdentifierList, false, false);
+        registerGUIModels(ForgeRegistries.ITEMS.getKey(ItemReg.WINCHESTER.get()), modelIdentifierList, false, false);
+        registerGUIModels(ForgeRegistries.ITEMS.getKey(ItemReg.NETHERITE_WINCHESTER.get()), modelIdentifierList, false, false);
         for (ModelResourceLocation modelIdentifier : modelIdentifierList) {
             event.register(modelIdentifier);
         }
