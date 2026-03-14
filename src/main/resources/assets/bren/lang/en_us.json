@@ -76,5 +76,8 @@
   "advancements.bren.adventure.long_shooting_machine_gun.description": "Shoot a Machine Gun for a couple of seconds",
   "advancements.bren.adventure.long_shooting_machine_gun.title": "AHHHHH AH HA HA HA HA HA!!",
 
-  "key.bren.reload": "Reload Gun"
+  "key.bren.reload": "Reload Gun",
+
+  "item.bren.winchester": "Lever-Action Rifle",
+  "item.bren.netherite_winchester": "Netherite Lever-Action Rifle"
 }
