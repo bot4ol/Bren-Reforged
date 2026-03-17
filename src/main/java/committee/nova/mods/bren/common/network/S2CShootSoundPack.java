@@ -1,10 +1,10 @@
 package committee.nova.mods.bren.common.network;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.NetworkEvent;
-import committee.nova.mods.bren.init.registry.SoundReg;
+import committee.nova.mods.bren.client.network.ClientPacketHandlers;
 
 import java.util.function.Supplier;
 
@@ -34,16 +34,10 @@ public class S2CShootSoundPack {
 
     public void run(Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
-            var client = Minecraft.getInstance();
-            var world = client.level;
-            if (world != null) {
-
-                var soundInstance = SimpleSoundInstance.forUI(SoundReg.ITEM_DISTANT_GUNFIRE, 1.0F - (world.getRandom().nextFloat() - 0.5F)/8, volume);
-                client.getSoundManager().play(soundInstance);
-            }
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () ->
+                ClientPacketHandlers.handleShootSound(this.volume)
+            );
         });
         ctx.get().setPacketHandled(true);
     }
-
-
 }
