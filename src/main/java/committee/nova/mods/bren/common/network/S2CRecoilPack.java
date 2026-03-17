@@ -1,10 +1,10 @@
 package committee.nova.mods.bren.common.network;
 
-import net.minecraft.client.Minecraft;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkEvent;
-import committee.nova.mods.bren.client.renderer.RecoilSys;
-import committee.nova.mods.bren.client.renderer.WeaponTickHolder;
+import committee.nova.mods.bren.client.network.ClientPacketHandlers;
 
 import java.util.function.Supplier;
 
@@ -31,11 +31,10 @@ public class S2CRecoilPack {
 
     public void run(Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
-            if (Minecraft.getInstance().player ==  null) {return;}
-            RecoilSys.shotEvent(Minecraft.getInstance().player, recoil);
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () ->
+                ClientPacketHandlers.handleRecoil(this.recoil)
+            );
         });
         ctx.get().setPacketHandled(true);
     }
-
-
 }
