@@ -1,11 +1,11 @@
 package committee.nova.mods.bren.common.network;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.NetworkEvent;
-import committee.nova.mods.bren.common.item.GunItem;
-import committee.nova.mods.bren.init.config.MConfig;
+import committee.nova.mods.bren.client.network.ClientPacketHandlers;
 
 import java.util.function.Supplier;
 
@@ -46,19 +46,10 @@ public class S2CShotPack {
 
     public void run(Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
-            var client = Minecraft.getInstance();
-            var world = client.level;
-            Vec3 origin = new Vec3(this.origin.x, this.origin.y, this.origin.z);
-            Vec3 direction = new Vec3(this.direction.x, this.direction.y, this.direction.z);
-
-            if (world != null) {
-                GunItem.shotParticles(world, origin, direction, world.getRandom());
-                if (MConfig.spawnCasingParticles.get() && this.ejectCasing) {
-                    GunItem.ejectCasingParticle(world, origin, direction, world.getRandom());
-                }
-            }        });
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () ->
+                ClientPacketHandlers.handleShot(this.origin, this.direction, this.ejectCasing)
+            );
+        });
         ctx.get().setPacketHandled(true);
     }
-
-
 }
