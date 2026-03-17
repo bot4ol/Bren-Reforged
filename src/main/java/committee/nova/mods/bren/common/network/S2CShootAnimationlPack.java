@@ -1,9 +1,10 @@
 package committee.nova.mods.bren.common.network;
 
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.network.NetworkEvent;
-import committee.nova.mods.bren.client.renderer.RecoilSys;
-import committee.nova.mods.bren.client.renderer.WeaponTickHolder;
+import committee.nova.mods.bren.client.network.ClientPacketHandlers;
 
 import java.util.function.Supplier;
 
@@ -29,10 +30,10 @@ public class S2CShootAnimationlPack {
 
     public void run(Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
-            WeaponTickHolder.setTicks(16);
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () ->
+                ClientPacketHandlers.handleShootAnimation()
+            );
         });
         ctx.get().setPacketHandled(true);
     }
-
-
 }
